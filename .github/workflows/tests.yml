@@ -1,0 +1,26 @@
+name: ROS 2 Humble simulation tests
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  humble:
+    runs-on: ubuntu-22.04
+    container: ros:humble-ros-base
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build and run Python and ROS integration tests
+        shell: bash
+        env:
+          KUAVO_TEST_WORKSPACE: /tmp/kuavo-humble-ci
+        run: bash scripts/test_humble.sh
+      - name: Retain test evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: humble-test-results
+          path: |
+            /tmp/kuavo-humble-ci/pytest.xml
+            /tmp/kuavo-humble-ci/build/kuavo_sorting/pytest.xml
+            /tmp/kuavo-humble-ci/log
