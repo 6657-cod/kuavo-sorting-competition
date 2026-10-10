@@ -15,6 +15,8 @@ setup(
     ],
     install_requires=['setuptools'],
     zip_safe=True,
+    tests_require=['pytest'],
+    python_requires='>=3.10',
     maintainer='student_team',
     maintainer_email='team@example.com',
     description='ROS 2 simulated sorting demo for Kuavo competition preparation',

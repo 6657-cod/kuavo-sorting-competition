@@ -1,0 +1,25 @@
+Starting >>> kuavo_sorting
+Finished <<< kuavo_sorting [0.62s]
+
+Summary: 1 package finished [0.78s]
+........................................................                 [100%]
+--------- generated xml file: /workspace/kuavo-cloud/humble/pytest.xml ---------
+56 passed in 17.60s
+Starting >>> kuavo_sorting
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-6.2.5, py-1.10.0, pluggy-0.13.0
+cachedir: /workspace/kuavo-cloud/humble/build/kuavo_sorting/.pytest_cache
+rootdir: /workspace/kuavo-sorting-competition, configfile: pytest.ini, testpaths: test
+plugins: ament-flake8-0.12.15, ament-pep257-0.12.15, ament-xmllint-0.12.15, ament-lint-0.12.15, ament-copyright-0.12.15, launch-testing-ros-0.19.14, launch-testing-1.0.15, colcon-core-0.21.3
+collected 56 items
+
+test/test_ros_integration.py ........                                    [ 14%]
+test/test_state_machine.py ............................................. [ 94%]
+...                                                                      [100%]
+
+- generated xml file: /workspace/kuavo-cloud/humble/build/kuavo_sorting/pytest.xml -
+============================= 56 passed in 17.82s ==============================
+Finished <<< kuavo_sorting [18.4s]
+
+Summary: 1 package finished [18.6s]
+Summary: 56 tests, 0 errors, 0 failures, 0 skipped
